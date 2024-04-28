@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #011627; */
+}
+.termekkartya{
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    margin-block: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 25px;
+    color: palevioletred;
+    font-weight: bold;
+}
+.termekkartya-img{
+    width: 300px;
+    height: 400px;
+    margin-inline: auto;
+    margin-block: 1rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+img{
+    width: 300px;
+    height: 400px;
+    border-radius: 25px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+.kosarba{
+    float: left;
+
+}
+.kosarba:hover{
+    right:300px
+}

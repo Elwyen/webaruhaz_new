@@ -1,0 +1,2 @@
+
+createNavMenu(document.body);

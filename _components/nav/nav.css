@@ -1,0 +1,53 @@
+/* #011627 black */
+/* palevioletred - pink */
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav {
+    display: inline;
+    flex-direction: row;
+
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border: 1px solid palevioletred;
+
+
+}
+
+.nav-item {
+    margin-right: 20px;
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .nav-list {
+        display: none;
+        flex-direction: column; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        width: 100%;
+        z-index: 1;
+    }
+    
+}
