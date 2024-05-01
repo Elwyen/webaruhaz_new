@@ -1,0 +1,46 @@
+*{
+    --background: #141414;
+    --color: palevioletred;
+}
+
+html{
+    background-color: var(--background);
+}
+
+body{
+    background-color: var(--color);
+    width: 80%;
+    margin: auto;
+    margin-block: 1.5rem;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+.product{
+    padding-left: 3rem;
+    text-align: center;
+}
+
+nav{
+    padding-block: 1rem;
+    margin-left: 1rem;
+}
+
+button{
+    background-color: var(--background);
+    color: #dddddd;
+    border-radius: 1.5rem;
+    margin: 6px;
+    font-weight: bold;
+    padding-block: 12px;
+    padding-inline: 20px;
+}
+
+button:hover{
+    background-color: var(--color);
+    color: var(--background);
+    transition: 0.3s;
+}

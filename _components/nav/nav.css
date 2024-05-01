@@ -1,5 +1,22 @@
-/* #011627 black */
-/* palevioletred - pink */
+/* #011627 black - kicsit sötétebb feketére váltottam, az szebb együtt szerintem*/
+/* palevioletred - pink*/
+
+*{
+    --background: #141414;
+    --color: palevioletred;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    background-color: var(--background);
+}
+
+body{
+    background-color: var(--color);
+    width: 80%;
+    margin: auto;
+    margin-block: 1.5rem;
+}
 
 .main-nav {
     display: flex;
@@ -11,7 +28,8 @@
 nav {
     display: inline;
     flex-direction: row;
-
+    padding-block: 1rem;
+    margin-left: 1rem;
 }
 
 .nav-list {
@@ -19,9 +37,6 @@ nav {
     padding: 0;
     margin: 0;
     display: flex;
-    border: 1px solid palevioletred;
-
-
 }
 
 .nav-item {
@@ -35,6 +50,14 @@ nav {
     display: block;
     padding: 8px;
     background-color: #dddddd;
+    border-radius: 0.3rem;
+    border: 1px solid var(--color);
+}
+
+.nav-link:hover{
+        background-color: var(--color);
+        border: solid black 1px;
+        transition: 0.3s;
 }
 
 

@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     /* background-color: #011627; */
+    --background: #141414;
+    --color: palevioletred;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    background-color: var(--background);
+}
+
+body{
+    background-color: var(--color);
+    width: 80%;
+    margin: auto;
+    margin-block: 1.5rem;
 }
 .termekkartya{
     width: 350px;
@@ -11,7 +25,7 @@
     margin-block: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 25px;
-    color: palevioletred;
+    color: var(--color);
     font-weight: bold;
 }
 .termekkartya-img{

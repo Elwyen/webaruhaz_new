@@ -44,6 +44,7 @@ const termekek=[
 // metodus ami létrehoz egy termekkartyat
 // egy olyan metodus ami az elozo metodussal feltolti a kartyakat
 //paraméterezzük fel a tömb alapján
+
 $(()=>{
     createNavMenu(document.body);
 
