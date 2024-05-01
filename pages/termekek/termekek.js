@@ -54,7 +54,7 @@ $(()=>{
         // $('#termekek').append(`<div class = "termekkartya"></div>`).append(`<div class="termekkatya-img"></div>`).append
             const kartya = $(`<div>`).html(i).addClass('termekkartya');
             kartya.append(`<div class ="termekkartya-img"><img src="${j}"></div>`);
-            kartya.append(`<a href="termek.html?product_id=${l}" class="comment">Vélemények</a>`);
+            kartya.append(`<a href"komment.html?product_id=${l}" class="comment">Vélemények</a>`);
             kartya.append(`<button class="kosarba">Kosárba</button>`);
             kartya.append(`<p>${k} Ft</p>`)
             $('#termekek').append(kartya)
