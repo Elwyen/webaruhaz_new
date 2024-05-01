@@ -4,20 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termékek</title>
-    <link rel="stylesheet" href="../../_components/nav/nav.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../termekek/komment.css">
+    <!-- <link rel="stylesheet" href="../../_components/nav/nav.css"> -->
+    
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"/>
 </head>
 <body>
-    <div class="media border p-3 row">
-        <img src="kepek/people1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle col-sm-2" style="width:80px;">
-    
-        <div class="media-body col-sm-10">
-            <h4>Dézi<small><i>2024.04.20.</i></small></h4>
-            <p>Hősiesen és csurom vizesen tűrte, amíg minden gombát lefotóztunk.</p>      
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 id="title" class="text-center text-white"></h1>
+            </div>
         </div>
-     </div>
+        
+        <div id="image" class="text-center">
+            <img src="/public/kepek/termekek/kep0.jpg" class="rounded mt-3 border border-light w-14r" alt="">
+        </div>
+
+        <div id="comment" class="row pt-5">
+            <div class="media border p-3 row rounded-pill rowmargin">
+                <img src="/public/kepek/termekek/people1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle col-sm-2 w-80">
+            
+                <div class="media-body col-sm-10">
+                    <h4>Dézi<small><i>2024.04.20.</i></small></h4>
+                    <p>Hősiesen és csurom vizesen tűrte, amíg minden gombát lefotóztunk.</p>      
+                </div>
+            </div>
+            <div class="media border p-3 row mt-3 rounded-pill rowmargin">
+                <img src="/public/kepek/termekek/people1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle col-sm-2 w-80">
+            
+                <div class="media-body col-sm-10">
+                    <h4>Dézi<small><i>2024.04.20.</i></small></h4>
+                    <p>Hősiesen és csurom vizesen tűrte, amíg minden gombát lefotóztunk.</p>      
+                </div>
+            </div>
+            <div class="media border p-3 row  mt-3 rounded-pill rowmargin">
+                <img src="/public/kepek/termekek/people1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle col-sm-2 w-80">
+            
+                <div class="media-body col-sm-10">
+                    <h4>Dézi<small><i>2024.04.20.</i></small></h4>
+                    <p>Hősiesen és csurom vizesen tűrte, amíg minden gombát lefotóztunk.</p>      
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="termekAdatok.js"></script>
     <script src="kommentek.js"></script>
 </body>
 </html>
