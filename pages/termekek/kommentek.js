@@ -38,9 +38,26 @@ const COMMENTS = [
     },
 ];
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-    
-// });
+let productIndex = -1
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    initProduct()
+});
+
+function initProduct(){
+    // Kinyerjük a product_indexet
+    const currentUrl = window.location.href // Jelenlegi url
+    const url = new URL(currentUrl) // Hozz létre egy URL objektumot
+    const params = new URLSearchParams(url.search)
+    productIndex = params.get('product_index') // Kérj le egy paramétert név alapján
+
+    // Betöltjük a képet
+    const imgContainer = document.querySelector("#image")
+    const img = document.createElement("img")
+    img.src = termekek[productIndex].kep
+    imgContainer.append(img)
+
+}
 
 // const products = document.querySelectorAll('.product'); 
 
