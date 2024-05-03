@@ -42,6 +42,10 @@ let productIndex = -1
 
 document.addEventListener("DOMContentLoaded", (event) => {
     initProduct()
+
+    //navbar meghivasa
+    createNavMenu(document.body);
+
 });
 
 function initProduct(){
