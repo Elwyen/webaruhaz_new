@@ -100,7 +100,7 @@ function createComment() {
   COMMENTS.forEach((comment,index) => {
     if(comment.product_id == productId){
         const kep = "../../public/kepek/users/" + comment.image
-        commentContainer.innerHTML += `<div class = "media border p-3 row rounded-pill rowmargin mb-2">
+        commentContainer.innerHTML += `<div class = "media border p-3 row rounded rowmargin mb-4">
         <img src = "${kep}" class="mr-3 mt-3 rounded-circle col-sm-2 w-80"></img>
         <div class = "media-body col-sm-10">
         <h4>${comment.name} - <i>${comment.email}</i></h4>
