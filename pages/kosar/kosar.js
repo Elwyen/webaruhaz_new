@@ -42,10 +42,13 @@ function paying(){
     if (cart.length === 0) {
         alert("A kosár üres!");
     } else{
-        alert(osszar);
+        alert(osszar + " Ft. Köszönjük a vásárlást!");
         cart.length = 0;
         localStorage.removeItem('kosar');
-        document.querySelector('.product').innerHTML = "";
+        const elementList = document.querySelectorAll('.product');
+        elementList.forEach(function(element) {
+            element.innerHTML = "";
+        });
     }
 
 }
