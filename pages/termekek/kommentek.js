@@ -1,9 +1,10 @@
-const COMMENTS = [
+let COMMENTS = [
     {
         product_id: 0,
         comment: 'Delicious cakes, cupcakes, and cake balls! I love that you can customize the cupcake flavors and fillings to create just the cupcake you are craving!',
         name: 'Suzy',
         star: 5,
+        email: 'suzy@yahoo.com',
         image: 'people1.jpg',
     },
     {
@@ -11,6 +12,7 @@ const COMMENTS = [
         comment: 'Highly recommend it!!!',
         jovalasz: 'Négyszeresükre',
         name: 'Daniel',
+        email: 'daniel@yahoo.com',
         star: 5,
         image: 'people2.jpg',
     },
@@ -18,6 +20,7 @@ const COMMENTS = [
         product_id: 2,
         comment: 'This place has the best desserts I have ever had.',
         name: 'Patty',
+        email: 'patty@yahoo.com',
         star: 4,
         image: 'people3.jpg',
     },
@@ -25,6 +28,7 @@ const COMMENTS = [
         product_id: 3,
         comment: 'Ordered regular and gluten free cupcakes several times and everything has always been amazing. Delicious cupcakes no matter what flavor.',
         name: 'Elen',
+        email: 'elen@yahoo.com',
         star: 4,
         image: 'people4.jpg',
     },
@@ -32,6 +36,7 @@ const COMMENTS = [
         product_id: 0,
         comment: 'Amazing !! Ordering again for my daughters birthday now !',
         name: 'Vic',
+        email: 'vic@yahoo.com',
         star: 5,
         image: 'people5.jpg',
     },
@@ -39,6 +44,7 @@ const COMMENTS = [
         product_id: 4,
         comment: 'The service was not satisfying. I give this place only 2 stars',
         name: 'Vic',
+        email: 'vic@yahoo.com',
         star: 5,
         image: 'people5.jpg',
     },
@@ -50,6 +56,7 @@ let productId = 0
 document.addEventListener("DOMContentLoaded", (event) => {
     initProduct()
     createComment()
+    addComment()
 
     //navbar meghivasa
     createNavMenu(document.body);
@@ -77,49 +84,54 @@ function initProduct(){
 
 }
 
-console.log(productIndex)
+//console.log(productIndex)
 
-// const products = document.querySelectorAll('.product'); 
 
-// products.forEach((product) => {
-//     product.addEventListener('click', (event) => { 
-//         const clickedProductId = event.target.id; // amire kattintok class termék annak az id-ját eltároljuk
-//         console.log('Clicked Product ID:', clickedProductId); // az id-et ellenőrzöm
-
-//         // Most, hogy megvan az id megjelenítjük a hozzátartozó hozzászólásokat
-
-//         // Komment gombhoz klikk eseményt rendelünk
-
-//         // Klikk esemény hatására kibővítjük a COMMENTS tömböt
-//     });
-// });
 
 function createComment() {
+
     
     const commentContainer = document.querySelector("#comment")
     const commentsLength = COMMENTS.length
     console.log(commentsLength)
 
+    commentContainer.innerHTML = ''
+
   COMMENTS.forEach((comment,index) => {
     if(comment.product_id == productId){
         const kep = "../../public/kepek/users/" + comment.image
-        commentContainer.innerHTML += `<div class = "media border p-3 row rounded-pill rowmargin">
+        commentContainer.innerHTML += `<div class = "media border p-3 row rounded-pill rowmargin mb-2">
         <img src = "${kep}" class="mr-3 mt-3 rounded-circle col-sm-2 w-80"></img>
         <div class = "media-body col-sm-10">
-        <h4>${comment.name}</h4>
+        <h4>${comment.name} - <i>${comment.email}</i></h4>
         <p>${comment.comment}</p>
         </div>
         </div>`
     }
-   
 
   })
 
-  
+}
 
+function addComment() {
 
+    const add = document.querySelector('#add')
 
-   
+    add.addEventListener('click',(event) =>{    // Klikk esemény hatására kibővítjük a COMMENTS tömböt
+        const nameInput = document.querySelector('#name-input').value
+        const mailInput = document.querySelector('#mail-input').value
+        const commentInput = document.querySelector('#comment-input').value
 
+        const myObj = {}
+        myObj.product_id = productId
+        myObj.comment = commentInput
+        myObj.name = nameInput
+        myObj.email = mailInput
+        myObj.star = 0
+        myObj.image = 'people1.jpg'
+        COMMENTS.push(myObj)
 
+        createComment()
+    } )
+    
 }
