@@ -1,9 +1,13 @@
 body{
     background-color: #000000 !important;
+    border-radius: 0.6rem;
+    padding-bottom: 3rem;
 }
 
 .media{
     background-color: rgba(250, 175, 188, 0.8);
+    color: white;
+    width: 90% !important;
 }
 
 .rowmargin{
@@ -17,4 +21,43 @@ body{
 
 .w-14r {
     width: 14rem;
+}
+
+#comment{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.send-btn{
+    width: 15%;
+    border-radius: 0.8rem;
+    display: block;
+    margin: auto;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid rgba(250, 175, 188, 0.8);
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+
+}
+
+.personal-input{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+#name-input, #mail-input{
+    width: 50%;
+}
+
+#comment-input{
+    margin-bottom: 2rem;
 }
