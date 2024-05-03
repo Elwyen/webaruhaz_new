@@ -4,7 +4,7 @@ const termekek=[
         id:0,
         termekleiras: "xd",
         ertekeles: 4,
-        ar: 15623,
+        ar: 600,
         kep: `../../public/kepek/termekek/kep0.jpg`
     },
     {
@@ -12,7 +12,7 @@ const termekek=[
         id:1,
         termekleiras: "xd",
         ertekeles: 2,
-        ar: 12223,
+        ar: 400,
         kep: `../../public/kepek/termekek/kep1.jpg`
     },
     {
@@ -20,7 +20,7 @@ const termekek=[
         id:2,
         termekleiras: "xd",
         ertekeles: 5,
-        ar: 1233,
+        ar: 350,
         kep: `../../public/kepek/termekek/kep2.jpg`
     },
     {
@@ -28,7 +28,7 @@ const termekek=[
         id:3,
         termekleiras: "xd",
         ertekeles: 4,
-        ar: 1222223,
+        ar: 400,
         kep: `../../public/kepek/termekek/kep3.webp`
     },
     {
@@ -36,7 +36,7 @@ const termekek=[
         id:4,
         termekleiras: "xd",
         ertekeles: 5,
-        ar: 126563,
+        ar: 280,
         kep: `../../public/kepek/termekek/kep4.webp`
     }
 ]
