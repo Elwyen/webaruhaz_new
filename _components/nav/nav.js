@@ -51,7 +51,7 @@ function createNavMenu(whereToNav) {
     window.addEventListener('load', function() {
         var screenWidth = window.innerWidth;
         var navList = document.querySelector('.nav-list');
-        console.log(screenWidth)
+
         if (screenWidth <= 1024) {
             navList.classList.add('show-menu')
             whereToNav.insertAdjacentElement('afterbegin', mobileMenuButton);
