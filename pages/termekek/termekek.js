@@ -8,6 +8,8 @@ $(()=>{
 
     $('body').append('<div id="termekek"></div>');
 
+    createNavMenu(document.body);
+
     function createCard(i,j,k,l){
         // $('#termekek').append(`<div class = "termekkartya"></div>`).append(`<div class="termekkatya-img"></div>`).append
             const kartya = $(`<div>`).html(i).addClass('termekkartya');
