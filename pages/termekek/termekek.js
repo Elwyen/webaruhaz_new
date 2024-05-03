@@ -2,9 +2,15 @@
 // metodus ami létrehoz egy termekkartyat
 // egy olyan metodus ami az elozo metodussal feltolti a kartyakat
 //paraméterezzük fel a tömb alapján
+let cart = [];
 
 $(()=>{
     //createNavMenu(document.body);
+    cart = getKosar();
+    if (cart.length > 0) {
+      const span = document.querySelector("span");
+      span.textContent= (`Kosár elemek száma: ${cart.length}`);
+    }
 
     $('body').append('<div id="termekek"></div>');
 
@@ -39,8 +45,7 @@ $(()=>{
         gombok.forEach(function(gomb) {
           gomb.addEventListener("click", function() {
             gombraKattintva(gomb.id);
-            localStorage.setItem('kosar', JSON.stringify(cart));
-            console.log('A kosár tartalma el lett mentve.');
+            saveKosar(cart);
           });
         });
     }

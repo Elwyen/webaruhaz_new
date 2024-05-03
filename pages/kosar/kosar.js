@@ -1,25 +1,15 @@
-// const cart = [...termekek]
-
 window.addEventListener('load', () => {
-    const mentettKosar = localStorage.getItem('kosar');
-    if (mentettKosar) {
-        cart = JSON.parse(mentettKosar);
-        // frissitKosar();
-    }
+    cart = getKosar();
     kosarElemek();
 });
 
 let osszar = 0;
-var cart = [];
+let cart = [];
 const cartItem = document.createElement('div');
 
 createNavMenu(document.body);
 
-
-// console.log(termekek)
-
 function kosarElemek(){
-
 
     cart.forEach(product =>{
         const cartItem = document.createElement('div');
@@ -43,8 +33,8 @@ function paying(){
         alert("A kosár üres!");
     } else{
         alert(osszar + " Ft. Köszönjük a vásárlást!");
-        cart.length = 0;
-        localStorage.removeItem('kosar');
+        cart.splice(0);
+        clearKosar();
         const elementList = document.querySelectorAll('.product');
         elementList.forEach(function(element) {
             element.innerHTML = "";
