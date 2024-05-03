@@ -1,0 +1,29 @@
+*{
+    --background-color1: pink;
+    --text-color1: crimson;
+}
+
+#bevezeto{
+    text-align: center;
+    margin: auto;
+    padding-block: 10rem;
+    width: 40%;
+    background-image: url(public/kepek/termekek/kep2.jpg);
+    color: var(--text-color1);
+    font-weight: 800;
+    border-radius: 0.75rem;
+    border: solid var(--text-color1) 1px;
+}
+
+h1, h2, p{
+    background-color: var(--background-color1)
+}
+
+footer{
+    opacity: 80%;
+    margin-top: 2rem;
+    padding-bottom: 6px;
+    text-align: center;
+    color: rgb(104, 36, 36);
+    background-color: var(--background-color1);
+}
