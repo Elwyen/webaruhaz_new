@@ -50,7 +50,7 @@ let COMMENTS = [
     },
 ];
 
-let productIndex = 0
+let productIndex = 0 
 let productId = 0
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -90,15 +90,12 @@ function initProduct(){
 
 function createComment() {
 
-    
     const commentContainer = document.querySelector("#comment")
-    const commentsLength = COMMENTS.length
-    console.log(commentsLength)
 
-    commentContainer.innerHTML = ''
+    commentContainer.innerHTML = '' // ki kell üríteni a containert, adatismétlődés miatt, így csak az újakat látjuk
 
   COMMENTS.forEach((comment,index) => {
-    if(comment.product_id == productId){
+    if(comment.product_id == productId){ // ellenőrzi egyezik a termék id-je a tömbben lévővel
         const kep = "../../public/kepek/users/" + comment.image
         commentContainer.innerHTML += `<div class = "media border p-3 row rounded rowmargin mb-4">
         <img src = "${kep}" class="mr-3 mt-3 rounded-circle col-sm-2 w-80"></img>
@@ -115,20 +112,21 @@ function createComment() {
 
 function addComment() {
 
-    const add = document.querySelector('#add')
+    const add = document.querySelector('#add') // send gombra esemény
 
     add.addEventListener('click',(event) =>{    // Klikk esemény hatására kibővítjük a COMMENTS tömböt
-        const nameInput = document.querySelector('#name-input').value
+        const nameInput = document.querySelector('#name-input').value // kinyerjük az input értékét
         const mailInput = document.querySelector('#mail-input').value
         const commentInput = document.querySelector('#comment-input').value
+        //const kep = "../../public/kepek/users/" + comment.image
 
-        const myObj = {}
-        myObj.product_id = productId
+        const myObj = {} // belerakjuk a myObj objektumba
+        myObj.product_id = productId // elmentjük azonos formában ahogy a tömbben is van
         myObj.comment = commentInput
         myObj.name = nameInput
         myObj.email = mailInput
         myObj.star = 0
-        myObj.image = 'people1.jpg'
+        myObj.image = './public/kepek/users/avatar.jpg' // nem mükszik
         COMMENTS.push(myObj)
 
         createComment()
