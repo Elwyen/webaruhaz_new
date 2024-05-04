@@ -39,7 +39,7 @@ $(()=>{
 
     function kosarbaGomb(){
 
-        const gombok = document.querySelectorAll('button')
+        const gombok = document.querySelectorAll('.kosarba')
         console.log(gombok)
 
         gombok.forEach(function(gomb) {
